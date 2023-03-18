@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fila de Brinquedo</title>
+</head>
+<body>
+    <h1>Fila do Brinquedo</h1>
+    <button onclick="inserir()">Entrar na Fila</button>
+    <br>
+    <br>
+    <button onclick="removerDaFila()">Entrar no Brinquedo</button>
+    <br>
+    <br>
+    
+<script>
+    let fila = new Array();
+    let brinquedo = new Array();
+
+     function inserir() {
+        fila.push(fila.length+1)
+        console.log('fila: ', fila); 
+    }
+
+    function removerDaFila(){
+                if(fila.length > 0){
+                    fila.splice(0,1);
+                    console.log('fila: ', fila)
+                    
+                    brinquedo.push(brinquedo.length+1)
+                    console.log('brinquedo: ', brinquedo)
+                }else{
+                    alert("Não há pessoas na fila!")
+                }
+            }
+
+</script>        
+</body>
+</html>
